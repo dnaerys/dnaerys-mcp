@@ -35,6 +35,18 @@ Remote MCP service via _Streamable HTTP:_
 
 #### Macromolecular structural complexes
 
+> _Treat the 26S Proteasome as a mechanically redundant 3D machine and map every missense variant from the KGP individuals
+across all 33 subunits. Perform a spatial analysis to determine if pathogenic variation is statistically partitioned toward
+the distal 'Lid' (Zone C) rather than the more evolutionary constrained 'Core' (Zone A) or 'Gating' (Zone B) interfaces.
+Identify individuals with a high cumulative burden (2+ 'Likely Pathogenic' variants) to investigate inter-subunit compensation,
+searching for paired 'weakening' and 'stabilizing' mutations at protein-protein hinges. Finally, define the 'mechanical
+tolerance' of the proteasome by establishing the maximum cumulative structural disruption observed in a single healthy
+individual based on AlphaMissense scores and calculated ΔΔG values._
+
+_[Case study: workflow, task reports, manuscripts drafts →](./examples/26S.md)_
+
+#### Macromolecular structural complexes
+
 > _The MCM2-7 Complex (The "DNA Helicase Motor") is a molecular masterpiece. It’s a heterohexameric ring where each subunit is
 a distinct "gear" in the DNA-unzipping motor. Unlike homomeric rings (where every subunit is the same), this complex is asymmetric.
 Each interface between subunits is unique, and they don't all burn ATP at the same rate. The MCM2/5 interface is the "gate" that
@@ -76,16 +88,6 @@ databases contain individuals carrying variants predicted to impair enzyme funct
 Reasoning through the AlphaMissense structural implications, can you detect a 'balancing act' where a loss of efficiency
 in Glutathione reductase is consistently paired with high-confidence benign or potentially activating variants in the
 Thioredoxin system ? Synthesize a model of 'Redox Robustness' based on the co-occurrence of these variants across the cohort._
-
-#### Macromolecular structural complexes
-
-> _Treat the 26S Proteasome as a mechanically redundant 3D machine and map every missense variant from the KGP individuals
-across all 33 subunits. Perform a spatial analysis to determine if pathogenic variation is statistically partitioned toward
-the distal 'Lid' (Zone C) rather than the more evolutionary constrained 'Core' (Zone A) or 'Gating' (Zone B) interfaces.
-Identify individuals with a high cumulative burden (2+ 'Likely Pathogenic' variants) to investigate inter-subunit compensation,
-searching for paired 'weakening' and 'stabilizing' mutations at protein-protein hinges. Finally, define the 'mechanical
-tolerance' of the proteasome by establishing the maximum cumulative structural disruption observed in a single healthy
-individual based on AlphaMissense scores and calculated ΔΔG values._
 
 _[More examples](./examples/README.md)_
 
@@ -139,8 +141,7 @@ java -Dquarkus.profile=dev -jar <full path>/onekgpd-mcp-runner.jar
 
 - to connect via _http_ transport, _remote or local_, simply direct the client to a destination,
 _e.g._ `http://localhost:9000/mcp` or `https://db.dnaerys.org:443/mcp`
-    - _NB:_ _Claude Desktop_ won't work with `http://localhost:9000/mcp` option (e.g. when running MCP server in a docker container).
-    This option is for clients like _Goose_.
+    - _NB:_ _Claude Desktop_ won't work with `http://localhost:9000/mcp` option. This option is for clients like _Goose_.
 
 - to connect via _stdio_ transport, MCP client should start application with _dev profile_ and with a full path to the jar file 
     - e.g. for _Claude Desktop_ add to config files (e.g. `claude_desktop_config.json`):
@@ -208,9 +209,8 @@ No personal information is collected. No cookies, tracking mechanisms or authent
 
 ## Support
 
-For issues, questions, or feedback:<br>
-issues: https://github.com/dnaerys/onekgpd-mcp/issues<br>
-email: mcp@dnaerys.org
+- Issues and questions: https://github.com/dnaerys/onekgpd-mcp/issues
+- Email: mcp@dnaerys.org
 
 ## License
 
